@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  src: url('/number-font.ttf');
+  font-family: 'Number Font'
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,6 +22,7 @@
 }
 
 body {
+  font-family: "Microsoft YaHei";
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,

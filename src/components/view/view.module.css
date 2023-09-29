@@ -1,0 +1,12 @@
+.view *{
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.num {
+    font-family: "Number Font";
+}
+
+.qr-code {
+    height: calc(100% - 1.5rem);
+}
