@@ -10,6 +10,7 @@ import EventAvailableOutlinedIcon from '@mui/icons-material/EventAvailableOutlin
 import dayjs from "dayjs";
 import { useState, PointerEvent, useEffect } from 'react';
 import { ADrawer } from '@/stores/drawer';
+import pubUse from '@/scripts/utils/pub-use';
 
 export interface IViewProps {
     className?: string;
@@ -19,7 +20,7 @@ export function Title() {
     const { icon, title } = useRecoilValue(AConfig);
 
     return <div className="flex m-7 items-center h-8 text-white">
-        <Image className="object-cover w-fit h-full mr-4" src={icon} alt="icon" width={128} height={128} />
+        <Image className="object-cover w-fit h-full mr-4" src={pubUse(icon)} alt="icon" width={128} height={128} />
         <Typography variant="subtitle1">{title}</Typography>
     </div>;
 }
@@ -67,7 +68,7 @@ export function Share() {
 
 
     return <Box className='relative h-full flex flex-col items-end justify-between'>
-        <Image className={mergeCn("w-fit", styles['qr-code'])} src="/QR-code.png" alt="QR-code" width={128} height={128} />
+        <Image className={mergeCn("w-fit", styles['qr-code'])} src={pubUse("/QR-code.png")} alt="QR-code" width={128} height={128} />
         <Typography className="h-6" variant="overline">和两亿人一起百词斩</Typography>
     </Box>;
 }
