@@ -69,7 +69,7 @@ export function Share() {
 
     return <Box className='relative h-full flex flex-col items-end justify-between'>
         <Image className={mergeCn("w-fit", styles['qr-code'])} src={pubUse("/QR-code.png")} alt="QR-code" width={128} height={128} />
-        <Typography className="h-6" variant="overline">和两亿人一起百词斩</Typography>
+        <Typography className="h-6" variant="overline">和2亿人一起百词斩</Typography>
     </Box>;
 }
 
