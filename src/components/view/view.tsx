@@ -73,6 +73,11 @@ export function Share() {
     </Box>;
 }
 
+export function Warning() {
+    
+    return <Typography className="absolute top-7 right-7 text-red-500 opacity-75 font-bold" variant='h4'>模拟海报</Typography>;
+}
+
 export default function View({ className }: IViewProps) {
     const { bg } = useRecoilValue(AConfig);
     const [, setDrawer] = useRecoilState(ADrawer);
@@ -117,5 +122,6 @@ export default function View({ className }: IViewProps) {
             </Box>
             <Share />
         </Box>
+        <Warning/>
     </div>;
 }
